@@ -7,13 +7,17 @@ public class UserProfile {
     private String username;
     private String name;
     private Instant joinedAt;
+    private String userType;
+    private String email;
 
 
-    public UserProfile(Long id, String username, String name, Instant joinedAt) {
+    public UserProfile(Long id, String username, String name, Instant joinedAt, String userType, String email) {
         this.id = id;
         this.username = username;
         this.name = name;
         this.joinedAt = joinedAt;
+        this.userType = userType;
+        this.email = email;
     }
 
     public Long getId() {
@@ -48,5 +52,19 @@ public class UserProfile {
         this.joinedAt = joinedAt;
     }
 
+    public String getUserType() {
+        return userType;
+    }
 
+    public void setUserType(String userType) {
+        this.userType = userType;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
